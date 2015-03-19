@@ -1,0 +1,17 @@
+{
+  "name": "NotifyDelete",
+  "version": "0.0.2",
+  "manifest_version": 2,
+  "description": "ガルーンのどこからでも通知を全権確認した事にする拡張",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.cybozu.com/g/*"],
+      "js": ["jquery-1.11.2.min.js","script.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "options.html"
+}
